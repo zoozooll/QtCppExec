@@ -36,6 +36,8 @@ add_executable(ThreadHandlerApplication
 target_link_libraries(ThreadHandlerApplication Qt${QT_VERSION_MAJOR}::Core)
 
 add_executable(GLThreadApplication
+    glthread/eglhelper.h
+    glthread/eglhelper.cpp
     glthread/glthread.h
     glthread/glthread.cpp
     glthread/main.cpp
