@@ -27,10 +27,21 @@ add_executable(CppApplication
 target_link_libraries(CppApplication Qt${QT_VERSION_MAJOR}::Core)
 
 add_executable(ThreadHandlerApplication
+    threadhandler/cthread.h
+    threadhandler/cthread.cpp
     threadhandler/main.cpp
+
 )
 
 target_link_libraries(ThreadHandlerApplication Qt${QT_VERSION_MAJOR}::Core)
+
+add_executable(GLThreadApplication
+    glthread/glthread.h
+    glthread/glthread.cpp
+    glthread/main.cpp
+)
+
+target_link_libraries(GLThreadApplication Qt${QT_VERSION_MAJOR}::Core)
 
 set(json_resource_files
     "model_list.json"
