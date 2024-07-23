@@ -45,9 +45,17 @@ add_executable(GLThreadApplication
 
 target_link_libraries(GLThreadApplication Qt${QT_VERSION_MAJOR}::Core)
 
-set(json_resource_files
-    "model_list.json"
-)
+#add_executable(Android_Message_Concurrency
+#    concurrency/main.cpp
+#)
+
+#target_link_libraries(Android_Message_Concurrency Qt${QT_VERSION_MAJOR}::Core)
+
+#set(json_resource_files
+#    "model_list.json"
+#)
+
+add_subdirectory("concurrency" ${CMAKE_CURRENT_BINARY_DIR}/concurrency)
 
 qt6_add_resources(CppApplication "jsons"
     PREFIX
